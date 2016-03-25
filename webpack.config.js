@@ -3,9 +3,9 @@ var webpack = require('webpack');
 
 module.exports = {
     devtool: 'source-map',
-    entry: ['./js/index'],
+    entry: ['./js/app/index'],
     output: {
-        filename: 'bundle.js',
+        filename: 'app.js',
         path: path.join(__dirname, 'js'),
         publicPath: './js/'
     },
@@ -16,9 +16,9 @@ module.exports = {
             exclude: /node_modules/
         }, ]
     }
-    //,
-    //watch: true,
-    //watcherOptions: {
-    //  aggregateTimeout: 100
-    //}
+    ,
+    watch: true,
+    watcherOptions: {
+      aggregateTimeout: 100
+    }
 };
